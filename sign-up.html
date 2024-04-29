@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="css/signup.css">
+</head>
+<body>
+    <div class="container">
+      <div class="left">
+        <img src="assets/img/BG.png" alt="Background Image">
+      </div>
+      <div class="right">
+        <div class="logo">
+          <img src="assets/img/logo.png" alt="Logo">
+          <h1>CREATE AN ACCOUNT</h1>
+        </div>
+        <form id="signup-form" class="step1-spacing">
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="Enter Email" required>
+    
+                <label for="contact-number">Contact Number</label>
+                <input type="text" name="contact-number" id="contact-number" placeholder="Enter contact number" required>
+                
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="Enter password" required>
+    
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" name="confirm-password" id="confirm-password" placeholder="Confirm password" required>
+
+                <div class="login-bttn">
+                    <button type="button" id="next-btn">Next</button>
+                </div>
+            </div>
+        </form>
+        
+        <!-- Additional Forms for Each Step -->
+        <form id="step-2" class="hidden">
+            <!-- Additional Forms for Each Step -->
+              <div class="user-type-buttons">
+                <button class="user-type-button" id="customer-btn" type="button">Customer</button>
+                <button class="user-type-button" id="rider-btn" type="button">Rider</button>
+                <button class="user-type-button" id="admin-btn" type="button">Admin</button>
+              </div>
+              <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username" placeholder="Enter Username" required>
+    
+                <label for="firstName">First Name</label>
+                <input type="text" name="firstName" id="firstName" placeholder="Enter First Name" required>
+                
+                <label for="lastName">Last Name</label>
+                <input type="text" name="LastName" id="password" placeholder="Enter Last Name" required>
+    
+                <label id="address-label" for="address">Address</label>
+                <input type="text" name="address" id="address" placeholder="Enter Address" required>
+                <label for="plateNumber" class="hidden">Plate Number</label>
+                <input type="text" name="plateNumber" id="plateNumber" placeholder="Enter Plate Number" required class="hidden">
+                <label for="branch" class="hidden">Branch</label>
+                <input type="text" name="branch" id="branch" placeholder="Enter Branch" required class="hidden">
+             
+                <div class="login-bttn">
+                    <button type="button" id="next-btn2">Next</button>
+                </div>
+            </div>
+        </form>
+
+        <!--Step 3-->
+        <form id="step-3" class="hidden">
+          <div>
+            CAPTCHA HERE
+          </div>
+          <div class="input-group">
+            <div class="login-bttn">
+              <button type="button" id="submit-button">Submit</button>
+            </div>
+          </div>
+        </form>
+
+        <!-- Repeat for additional steps -->
+
+        <p class="signup-text">Sign up with</p>
+        <div class="social-icons">
+          <img src="assets/icon/facebook.png" alt="Facebook">
+          <img src="assets/icon/google.png" alt="Google">
+          <img src="assets/icon/apple.png" alt="Apple">
+        </div>
+        <div class="signup-text">
+              Already a member?
+              <a href="/index.html">
+                  Log In
+              </a>
+        </div>
+        
+      </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const nextBtn = document.getElementById('next-btn');
+          const nextBtn2 = document.getElementById('next-btn2');
+          const signupForm = document.getElementById('signup-form');
+          const step2Form = document.getElementById("step-2");
+          const step3 = document.getElementById("step-3");
+          const customerBtn = document.getElementById('customer-btn');
+          const riderBtn = document.getElementById('rider-btn');
+          const adminBtn = document.getElementById('admin-btn');
+
+// Add event listener to the Customer button
+customerBtn.addEventListener('click', function () {
+  resetSelectedButton();
+  customerBtn.classList.add('selected');
+  document.getElementById('address').classList.remove('hidden');
+  document.getElementById('plateNumber').classList.add('hidden');
+  document.getElementById('branch').classList.add('hidden');
+  document.getElementById('address-label').textContent = 'Address'; // change label text
+});
+
+// Add event listener to the Rider button
+riderBtn.addEventListener('click', function () {
+  resetSelectedButton();
+  riderBtn.classList.add('selected');
+  document.getElementById('address').classList.add('hidden');
+  document.getElementById('plateNumber').classList.remove('hidden');
+  document.getElementById('branch').classList.add('hidden');
+  document.getElementById('address-label').textContent = 'Plate Number'; // change label text
+});
+
+// Add event listener to the Admin button
+adminBtn.addEventListener('click', function () {
+  resetSelectedButton();
+  adminBtn.classList.add('selected');
+  document.getElementById('address').classList.add('hidden');
+  document.getElementById('plateNumber').classList.add('hidden');
+  document.getElementById('branch').classList.remove('hidden');
+  document.getElementById('address-label').textContent = 'Branch'; // change label text
+});
+
+    // Function to reset the selected state of all buttons
+    function resetSelectedButton() {
+        customerBtn.classList.remove('selected');
+        riderBtn.classList.remove('selected');
+        adminBtn.classList.remove('selected');
+    }
+
+    // Add event listener to the Next button
+    nextBtn.addEventListener('click', function () {
+        // Validate the current form fields if needed
+        // Here you can implement your validation logic
+        // If the form is valid, show the next form
+        signupForm.classList.add('hidden');
+        step2Form.classList.remove('hidden');
+        customerBtn.classList.add('selected');
+    });
+
+    nextBtn2.addEventListener('click', function () {
+        // Validate the current form fields if needed
+        // Here you can implement your validation logic
+        // If the form is valid, show the next form
+        step2Form.classList.add('hidden');
+        step3.classList.remove('hidden');
+    });
+  });
+</script>
+</body>
+</html>

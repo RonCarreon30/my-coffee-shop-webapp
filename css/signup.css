@@ -1,0 +1,164 @@
+/* styles.css */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /* Prevent scrolling */
+  }
+  
+  .container {
+    display: flex;
+    height: 100%;
+  }
+  
+  .left {
+    flex: 1;
+    position: relative;
+  }
+  
+  .left img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the entire container */
+    z-index: -1; /* Send image to the back */
+  }
+  
+  .right {
+    flex: 1;
+    padding: 20px;
+    background-color: #884a39;
+  }
+  
+  .logo {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  
+  .logo img {
+    max-width: 200px; /* Adjust the size as needed */
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: large;
+    color: #fff;
+    margin-top: 30px;
+  }
+  
+  form {
+    max-width: 300px;
+    margin: 0 auto;
+    
+  }
+
+  input, button {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: 0px;
+    font-size: smaller;
+  }
+
+  .input-group{
+    margin-bottom: 20px;
+    
+  }
+
+  .login-bttn{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 0px;
+    border: 0px;
+  }
+
+  .login-bttn button{
+    background-color: #c7b7a3;
+  }
+
+  label {
+    color: #fff;
+    margin-left: 10px;
+    font-size: 12px;
+  }
+  
+  .forgot-pass-text {
+    float: right;
+    font-size: 12px;
+    color: #fff;
+  }
+  
+  .social-icons {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .social-icons img {
+    width: 30px; /* Adjust the size as needed */
+    margin: 0 5px;
+  }
+  
+  .signup-text {
+    text-align: center;
+    margin-top: 20px;
+    font-size: small;
+  }
+  
+  .signup-text p {
+    margin: 0; /* Remove default margin */
+  }
+  
+  .signup-text a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .signup-text a:hover {
+    text-decoration: underline;
+  }
+
+  .hidden {
+    display: none;
+  }
+  .step1-spacing{
+    margin-top: 50px;
+  }
+
+  .user-type-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px; /* Adjust spacing as needed */
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+  
+  .user-type-button {
+    border: none;
+    background-color: transparent;
+    color: #FFF; /* Default text color */
+    font-size: smaller; /* Adjust font size as needed */
+    cursor: pointer;
+    outline: none;
+    position: relative; /* Add relative positioning for pseudo-element */
+  }
+  
+  .user-type-button.selected {
+    color: #C7B7A3; /* Text color for selected button */
+  }
+  
+  .user-type-button.selected::after {
+    content: ""; /* Add underline pseudo-element */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px; /* Underline height */
+    background-color: #C7B7A3; /* Underline color for selected button */
+  }
+  
