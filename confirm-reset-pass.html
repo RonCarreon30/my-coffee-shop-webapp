@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reset Password</title>
+  <link rel="stylesheet" href="css/confirm-pass.css">
+  <style>
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left">
+      <img src="assets/img/BG.png" alt="Background Image">
+    </div>
+    <div class="right">
+      <div class="logo">
+        <img src="assets/img/logo.png" alt="Logo">
+        <h1>FIND YOUR ACCOUNT</h1>
+        <p>You may receive Email notification from us for</p>
+        <p>security and login purposes</p>
+      </div>
+      <div class="input-group">
+        <input type="text" pattern="[0-9]*" id="code1" name="code1" placeholder="0" required>
+        <input type="text" pattern="[0-9]*" id="code2" name="code2" placeholder="0" required>
+        <input type="text" pattern="[0-9]*" id="code3" name="code3" placeholder="0" required>
+        <input type="text" pattern="[0-9]*" id="code4" name="code4" placeholder="0" required>
+      </div>
+      <div class="timer">
+        <span id="timer">00:30</span>
+        <span id="resend-code" onclick="resendCode()">Resend Code</span>
+      </div>
+    </div>
+  </div>
+  <script>
+    let timer = 30;
+    let intervalId = setInterval(countdown, 1000);
+    
+    function countdown() {
+      timer--;
+      const minutes = Math.floor(timer / 60);
+      const seconds = timer % 60;
+      document.getElementById('timer').textContent = `0${minutes}:${seconds.toString().padStart(2, '0')}`;
+      
+      if (timer === 0) {
+        clearInterval(intervalId);
+        document.getElementById('resend-code').style.cursor = 'pointer';
+      }
+    }
+    
+    function resendCode() {
+      timer = 30;
+      intervalId = setInterval(countdown, 1000);
+      document.getElementById('resend-code').style.cursor = 'default';
+    }
+  </script>
+</body>
+</html>

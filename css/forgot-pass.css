@@ -1,0 +1,114 @@
+/* styles.css */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /* Prevent scrolling */
+  }
+  
+  .container {
+    display: flex;
+    height: 100%;
+  }
+  
+  .left {
+    flex: 1;
+    position: relative;
+  }
+  
+  .left img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the entire container */
+    z-index: -1; /* Send image to the back */
+  }
+  
+  .right {
+    flex: 1;
+    padding: 20px;
+    background-color: #884a39;
+  }
+  
+  .logo {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 70px;
+  }
+  
+  .logo img {
+    max-width: 600px; /* Adjust the size as needed */
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 25px;
+    color: #fff;
+    margin-top: 100px;   
+  }
+  .logo p{
+    text-align: center;
+    font-size: x-small;
+    color: #fff;
+    margin: 0px;
+    padding: 0px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  form {
+    max-width: 400px;
+    margin: 0 auto;
+    
+  }
+  
+  input, button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 0px;
+    border-radius: 10px;
+    border: 0px;
+  }
+
+  .input-group{
+    margin-bottom: 20px;
+    margin-top: 100px;
+  }
+
+  .login-bttn{
+    width: 70%;
+    padding: 10px;
+    margin-bottom: 0px;
+    border: 0px;
+    margin-top: 50px;
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+
+  .login-bttn button{
+    background-color: #c7b7a3;
+  }
+
+  label {
+    color: #fff;
+    margin-left: 10px;
+  }
+  
+  .hidden {
+    display: none;
+  }
+
+  .switch-text{
+    color: #fff;
+    width: 100%;
+    margin-top: 0;
+    margin-left: 30%;
+    margin-right: 25%;
+    font-size: smaller;
+  }
+  .switch-text a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
