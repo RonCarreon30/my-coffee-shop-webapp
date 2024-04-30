@@ -1,11 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forgot Pass</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reset Password</title>
+  <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
-    
+  <div class="container">
+    <div class="left">
+      <img src="assets/img/BG.png" alt="Background Image">
+    </div>
+    <div class="right">
+      <div class="logo">
+        <img src="assets/img/logo.png" alt="Logo">
+        <h1>LOG IN TO myCoffeeShop</h1>
+      </div>
+      <form>
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Enter Email" required>
+        </div>
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="Enter Password" required>
+          <a class="forgot-pass-text" href="/reset-pass.html">Forgot password?</a>
+        </div>
+        <div class="login-bttn">
+            <button type="submit">Login</button>
+        </div>
+        
+      </form>
+      <p class="signup-text">Sign up with</p>
+      <div class="social-icons">
+        <img src="assets/icon/facebook.png" alt="Facebook">
+        <img src="assets/icon/google.png" alt="Google">
+        <img src="assets/icon/apple.png" alt="Apple">
+      </div>
+      <div class="signup-text">
+            Not a member? 
+            <a href="/sign-up.html">
+                Sign up
+            </a>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
