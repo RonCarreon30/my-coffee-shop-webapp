@@ -27,11 +27,14 @@
           <label for="mobile">Mobile Number</label>
           <input type="tel" id="mobile" name="mobile" placeholder="Enter Mobile Number" required>
         </div>
+        <div class="switch-text">
+          <a onclick="switchSearch()">Search by mobile number instead?</a>
+        </div>
         <div class="login-bttn">
           <button type="submit" onclick="nextPage()">Next</button>
         </div>
-        <div class="switch-text">
-          <a onclick="switchSearch()">Search by mobile number instead?</a>
+        <div class="back-to-login-text">
+          <p onclick="backToLogin()">< Back to Login</p>
         </div>
       </form>
     </div>
@@ -47,6 +50,10 @@
     
     function nextPage() {
       window.location.href = 'confirm-reset-pass.html';
+    }
+
+    function backToLogin() {
+      window.location.href = 'index.html';
     }
   </script>
 </body>

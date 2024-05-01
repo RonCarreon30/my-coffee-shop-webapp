@@ -35,11 +35,11 @@ body, html {
   .logo {
     text-align: center;
     margin-bottom: 20px;
-    margin-top: 70px;
+    margin-top: 20%;
   }
   
   .logo img {
-    max-width: 600px; /* Adjust the size as needed */
+    max-width: 700px; /* Adjust the size as needed */
   }
   
   h1 {
@@ -51,8 +51,9 @@ body, html {
   }
   
   form {
-    max-width: 300px;
-    margin: 0 auto;
+    max-width: 400px;
+    margin: 10% auto;
+
     
   }
   
@@ -65,18 +66,21 @@ body, html {
   }
 
   .input-group{
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
 
   .login-bttn{
     width: 100%;
     padding: 10px;
+    margin-top: 50px;
     margin-bottom: 0px;
     border: 0px;
   }
 
   .login-bttn button{
     background-color: #c7b7a3;
+    width: 70%;
+    margin: 0px 15%;
   }
 
   label {
@@ -97,12 +101,12 @@ body, html {
   
   .social-icons img {
     width: 30px; /* Adjust the size as needed */
-    margin: 0 5px;
+    margin: 2px 5px;
   }
   
   .signup-text {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 15%;
   }
   
   .signup-text p {
