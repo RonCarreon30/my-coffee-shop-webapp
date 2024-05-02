@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reset Password</title>
+  <link rel="stylesheet" href="css/create-pass.css">
+</head>
+<body>
+  <div class="container">
+    <div class="left">
+      <img src="assets/img/BG.png" alt="Background Image">
+    </div>
+    <div class="right">
+      <div class="logo">
+        <img src="assets/img/logo.png" alt="Logo">
+        <h1>CREATE NEW PASSWORD</h1>
+      </div>
+      <form>
+        <div class="input-group" id="password-input">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="Enter New Password" required>
+        </div>
+        <div class="input-group" id="confirm-pass-input">
+          <label for="confirm-pass">Mobile Number</label>
+          <input type="password" id="confirm-pass" name="confirm-pass" placeholder="Enter New Password Again" required>
+        </div>
+        <div class="login-bttn">
+          <button type="submit" onclick="Login()">Login</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script>
+    
+    function Login() {
+      window.location.href = 'index.html';
+    }
+  </script>
+</body>
+</html>

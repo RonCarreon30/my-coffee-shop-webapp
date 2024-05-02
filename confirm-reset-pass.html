@@ -31,13 +31,13 @@
           <span>Resend Code</span>
         </div>
         <div class="login-bttn">
-          <button>Next</button>
+          <button onclick="goToChangePass()">Next</button>
         </div>
         <div class="resend-bttn">
           <button id="resend-code" onclick="resendCode()">Resend</button>
         </div>
         <div class="back-to-login-text">
-          <p>< Back to login</p>
+          <p>&lt; Back to login</p>
         </div>
       </div>
     </div>
@@ -62,6 +62,10 @@
       timer = 30;
       intervalId = setInterval(countdown, 1000);
       document.getElementById('resend-code').style.cursor = 'default';
+    }
+
+    function goToChangePass() {
+      window.location.href = 'create-pass.html';
     }
   </script>
 </body>
